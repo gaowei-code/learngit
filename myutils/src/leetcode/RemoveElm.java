@@ -17,5 +17,6 @@ public class RemoveElm {
         }
 
         return arr.length - len;
+
     }
 }
