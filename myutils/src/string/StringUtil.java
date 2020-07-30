@@ -108,10 +108,4 @@ public class StringUtil {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-//        System.out.println(parseInt("123www"));
-        System.out.println(parseInt("123www",23));
-    }
-
 }
