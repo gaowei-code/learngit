@@ -24,18 +24,48 @@ public class StringUtil {
     }
 
     /**
+     * 判断字符串是否是整型
+     * @param value
+     * @return
+     */
+    public static boolean isInt(String value){
+        if (isEmpty(value)){
+            return false;
+        }
+        try {
+            Integer.parseInt(value);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 判断字符串是否是浮点型
+     * @param value
+     * @return
+     */
+    public static boolean isDouble(String value){
+        if (isEmpty(value)){
+            return false;
+        }
+        try {
+            Double.parseDouble(value);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * 将字符串转化为整型，若转换不成功，返回0
      * @param value
      * @return
      */
     public static int parseInt(String value){
         int result = 0;
-        try {
-            Integer i = Integer.valueOf(value);
-            result = i;
-        } catch (NumberFormatException e){
-            result = 0;
-            return result;
+        if (isInt(value)){
+            result = Integer.valueOf(value);
         }
         return result;
     }
@@ -47,12 +77,8 @@ public class StringUtil {
      */
     public static int parseInt(String value, int defaultValue){
         int result = defaultValue;
-        try {
-            Integer i = Integer.valueOf(value);
-            result = i;
-        } catch (NumberFormatException e){
-            result = defaultValue;
-            return result;
+        if (isInt(value)){
+            result = Integer.valueOf(value);
         }
         return result;
     }
@@ -64,12 +90,8 @@ public class StringUtil {
      */
     public static double parseDouble(String value){
         double result = 0;
-        try {
-            Double d = Double.valueOf(value);
-            result = d;
-        } catch (NumberFormatException e){
-            result = 0;
-            return result;
+        if (isDouble(value)){
+            result = Double.valueOf(value);
         }
         return result;
     }
@@ -81,12 +103,8 @@ public class StringUtil {
      */
     public static double parseDouble(String value, double defaultValue){
         double result = defaultValue;
-        try {
-            Double d = Double.valueOf(value);
-            result = d;
-        } catch (NumberFormatException e){
-            result = defaultValue;
-            return result;
+        if (isDouble(value)){
+            result = Double.valueOf(value);
         }
         return result;
     }

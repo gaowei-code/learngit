@@ -43,8 +43,5 @@ public class Test02 {
         }
         end = System.currentTimeMillis()/1000;
         long time3 = end - start;
-        System.out.println("for循环时间为："+time1);
-        System.out.println("增强for循环时间为："+time2);
-        System.out.println("迭代器循环时间为："+time3);
     }
 }
