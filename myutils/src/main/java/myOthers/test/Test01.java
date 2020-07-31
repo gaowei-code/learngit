@@ -1,4 +1,4 @@
-package test;
+package myOthers.test;
 
 /**
  * @Description

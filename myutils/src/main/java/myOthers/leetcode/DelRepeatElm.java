@@ -1,4 +1,4 @@
-package leetcode;
+package myOthers.leetcode;
 
 import java.util.Arrays;
 

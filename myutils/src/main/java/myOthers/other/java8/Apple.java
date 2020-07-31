@@ -1,4 +1,4 @@
-package other.java8;
+package myOthers.other.java8;
 
 import java.math.BigDecimal;
 
